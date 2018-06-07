@@ -1,5 +1,5 @@
 #SqlAdvisor docker 
-
+(非官方)
 ## 构建
 ```sh
     docker build -t sqladvisor .   # 开始构建一个名字叫sqladvisor的镜像
@@ -54,6 +54,8 @@ sqls=sql1;sql2;sql3....
 ```
 #cmd docker run -i -t --rm -v $PWD:/data sqladvisor  -f /data/sql.cnf -v 1
 ```
+
+[镜像](https://hub.docker.com/r/yuloyu/sqladvisor/)
 
 [官方git](https://github.com/Meituan-Dianping/SQLAdvisor)
 
