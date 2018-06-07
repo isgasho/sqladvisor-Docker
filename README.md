@@ -11,7 +11,7 @@
 
 ```sh
 
-#cmd docker run -i -t --rm sqladvisor sqladvisor -?
+#cmd docker run -i -t --rm sqladvisor  -?
 
 
 ------------------输出-----------------
@@ -34,7 +34,7 @@ Application Options:
   -v, --verbose           1:output logs 0:output nothing
   
   
-#cmd docker run -i -t --rm sqladvisor sqladvisor -h xx.xx.xx.xx  -P 3306  -u root -p 123456 -d test -q "select * from test" -v 1
+#cmd docker run -i -t --rm sqladvisor  -h xx.xx.xx.xx  -P 3306  -u root -p 123456 -d test -q "select * from test" -v 1
 ```
 
 
@@ -52,7 +52,7 @@ sqls=sql1;sql2;sql3....
 
 ```
 ```
-#cmd docker run -i -t --rm -v $PWD:/data sqladvisor sqladvisor -f /data/sql.cnf -v 1
+#cmd docker run -i -t --rm -v $PWD:/data sqladvisor  -f /data/sql.cnf -v 1
 ```
 
 [官方git](https://github.com/Meituan-Dianping/SQLAdvisor)
@@ -66,6 +66,8 @@ sqls=sql1;sql2;sql3....
 直接 docker run -i -t --rm sqladvisor  -? 使用
 
 在Dockerfile 文件里面 最后一行 加入CMD ['sqladvisor'] 没用
+
+已经解决。用 ENTRYPOINT 
 
 
 

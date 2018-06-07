@@ -21,7 +21,7 @@ RUN  cmake -DCMAKE_BUILD_TYPE=debug ./ \
      && make \
      && ln -s /SQLAdvisor/sqladvisor/sqladvisor /bin/sqladvisor
 
-CMD ['sqladvisor']
+ENTRYPOINT  ["sqladvisor"]
 
 
 
